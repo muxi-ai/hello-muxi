@@ -1,0 +1,59 @@
+schema: "1.0.0"
+
+id: "hello-muxi"
+name: "Hello Muxi"
+description: "A showcase formation for the MUXI registry that demonstrates multi-agent orchestration, MCP integration, SOPs, and real-world side effects — all while explaining MUXI itself."
+version: "1.0.0"
+
+server:
+  host: "0.0.0.0"
+  port: 8271
+  api_keys:
+    admin_key: "${{ secrets.FORMATION_ADMIN_API_KEY }}"
+    client_key: "${{ secrets.FORMATION_CLIENT_API_KEY }}"
+
+overlord:
+  response:
+    streaming: true
+
+llm:
+  api_keys:
+    anthropic: "${{ secrets.ANTHROPIC_API_KEY }}"
+  models:
+    - text: "anthropic/claude-haiku-4-5"
+
+scheduler:
+  timezone: "UTC"
+
+# ─────────────────────────────────────────────────────────────
+# Additional configuration (uncomment/edit as needed)
+# ─────────────────────────────────────────────────────────────
+
+# Add more LLM providers (use 'muxi config llm' for guided setup):
+# llm:
+#   api_keys:
+#     anthropic: "${{ secrets.ANTHROPIC_API_KEY }}"
+
+# Persistent memory (use 'muxi config memory' for guided setup):
+# memory:
+#   persistent:
+#     connection_string: "postgres://user:pass@host:5432/db"
+
+# Logging streams (use 'muxi config logging' for guided setup):
+# logging:
+#   streams:
+#     - transport: "stdout"
+#       level: "info"
+
+# Input limits (defaults shown):
+# input_limits:
+#   max_message_length: 100000
+#   max_file_size_bytes: 52428800
+
+# Runtime settings:
+# runtime:
+#   built_in_mcps: true
+
+# User credentials mode:
+# user_credentials:
+#   mode: "redirect"
