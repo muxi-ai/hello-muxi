@@ -1,4 +1,4 @@
-# Hello Muxi
+# Hello MUXI
 
 A multi-agent formation that introduces you to MUXI by explaining itself, crawling its own docs, generating files, and posting a real comment on GitHub.
 
@@ -8,7 +8,7 @@ Two specialist agents coordinated by an Overlord:
 
 | Agent | Role | Tools |
 |-------|------|-------|
-| **Muxi Expert** | Explains MUXI using embedded knowledge and live docs. Can generate PDFs, charts, and other files. | Firecrawl, generate_file |
+| **MUXI Expert** | Explains MUXI using embedded knowledge and live docs. Can generate PDFs, charts, and other files. | Firecrawl, generate_file |
 | **Community Greeter** | Posts a greeting on the MUXI GitHub repo as proof of real-world action | GitHub |
 
 ## Things to Try
@@ -75,7 +75,7 @@ The formation will ask your name, explain MUXI, post a greeting on GitHub, and s
 ## What the Onboarding SOP Does
 
 1. The Overlord greets you and asks for your name
-2. The **Muxi Expert** gives a concise intro to MUXI (using embedded knowledge + Firecrawl)
+2. The **MUXI Expert** gives a concise intro to MUXI (using embedded knowledge + Firecrawl)
 3. The **Community Greeter** posts "Hello from [your name]!" on [github.com/muxi-ai/muxi/issues/50](https://github.com/muxi-ai/muxi/issues/50) and returns the comment URL
 4. The Overlord recaps: two agents, two MCPs, one SOP
 
