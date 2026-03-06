@@ -3,7 +3,7 @@ schema: "1.0.0"
 id: "hello-muxi"
 name: "Hello Muxi"
 description: "A showcase formation for the MUXI registry that demonstrates multi-agent orchestration, MCP integration, SOPs, and real-world side effects — all while explaining MUXI itself."
-version: "1.0.0"
+version: "1.1.0"
 
 server:
   host: "0.0.0.0"
@@ -24,6 +24,15 @@ llm:
 
 scheduler:
   timezone: "UTC"
+
+agents:
+  - muxi-expert
+  - community-greeter
+
+mcp:
+  servers:
+    - firecrawl-web-scraper
+    - github-mcp
 
 # ─────────────────────────────────────────────────────────────
 # Additional configuration (uncomment/edit as needed)
