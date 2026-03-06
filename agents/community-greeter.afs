@@ -3,14 +3,12 @@ schema: "1.0.0"
 id: "community-greeter"
 name: "Community Greeter"
 description: "Posts a greeting on the MUXI GitHub demo issue to prove agents can take real-world actions"
-active: true
 
 role: "specialist"
 specialties:
   - "github"
   - "general_conversation"
   - "basic_reasoning"
-
 
 system_message: |
   You are the Community Greeter — a specialist agent in the Hello World formation.
@@ -38,19 +36,9 @@ system_message: |
   - If the target issue doesn't exist, return the error and the expected issue URL
   - Never stall. Report the failure clearly and return so the host can move on
 
-# Agent-specific MCP servers
 mcp_servers:
-  - id: "github-mcp"
-    description: "Github MCP"
-    type: "http"
-    endpoint: "https://api.githubcopilot.com/mcp/"
-    timeout_seconds: 30
-    retry_attempts: 3
-    auth:
-      type: "bearer"
-      token: "${{ secrets.GITHUB_PAT }}"
+  - github-mcp
 
-# Agent-to-Agent communication
 a2a:
   internal: true
   external: false
