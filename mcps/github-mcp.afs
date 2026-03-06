@@ -1,0 +1,12 @@
+schema: "1.0.0"
+
+id: "github-mcp"
+description: "Github MCP"
+
+type: "http"
+endpoint: "https://api.githubcopilot.com/mcp/"
+timeout_seconds: 30
+retry_attempts: 3
+auth:
+  type: "bearer"
+  token: "${{ secrets.GITHUB_PAT }}"
