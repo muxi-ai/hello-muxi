@@ -1,10 +1,9 @@
 schema: "1.0.0"
 
 id: "hello-muxi"
-name: "Hello Muxi"
+name: "Hello MUXI"
 description: "A showcase formation for the MUXI registry that demonstrates multi-agent orchestration, MCP integration, SOPs, and real-world side effects — all while explaining MUXI itself."
-version: "1.1.0"
-
+version: "1.1.1"
 server:
   host: "0.0.0.0"
   port: 8271
@@ -23,6 +22,7 @@ llm:
     - text: "anthropic/claude-haiku-4-5"
 
 scheduler:
+  enabled: true
   timezone: "UTC"
 
 agents:
