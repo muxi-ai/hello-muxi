@@ -5,10 +5,31 @@ name: "Muxi Expert"
 description: "Explains MUXI and formations using embedded knowledge and live documentation via Firecrawl"
 
 role: "specialist"
+specialization_domain: "muxi-platform"
 specialties:
   - "muxi"
   - "muxi docs"
   - "web browsing"
+  - "platform explanation"
+specialization_keywords:
+  - "muxi"
+  - "overlord"
+  - "formation"
+  - "agent"
+  - "agents"
+  - "mcp"
+  - "sop"
+  - "sops"
+  - "skill"
+  - "skills"
+  - "memory"
+  - "knowledge"
+  - "docs"
+  - "documentation"
+  - "muxi.org"
+  - "agentformation"
+  - "scrape"
+  - "url"
 
 system_message: |
   You are the Muxi Expert — a specialist agent in the Hello World formation.
