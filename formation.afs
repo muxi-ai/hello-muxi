@@ -1,9 +1,9 @@
 schema: "1.0.0"
 
 id: "hello-muxi"
-name: "Hello MUXI"
+name: "Hello Muxi"
 description: "A showcase formation for the MUXI registry that demonstrates multi-agent orchestration, MCP integration, SOPs, and real-world side effects — all while explaining MUXI itself."
-version: "1.1.3"
+version: "1.1.1"
 server:
   host: "0.0.0.0"
   port: 8271
@@ -14,17 +14,14 @@ server:
 overlord:
   response:
     streaming: true
-  workflow:
-    auto_decomposition: true
 
 llm:
   api_keys:
     anthropic: "${{ secrets.ANTHROPIC_API_KEY }}"
   models:
-    - text: "anthropic/claude-sonnet-4-6"
+    - text: "anthropic/claude-haiku-4-5"
 
 scheduler:
-  enabled: true
   timezone: "UTC"
 
 agents:
