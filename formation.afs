@@ -1,9 +1,9 @@
 schema: "1.0.0"
 
 id: "hello-muxi"
-name: "Hello Muxi"
+name: "Hello MUXI"
 description: "A showcase formation for the MUXI registry that demonstrates multi-agent orchestration, MCP integration, SOPs, and real-world side effects — all while explaining MUXI itself."
-version: "1.1.1"
+version: "1.1.3"
 server:
   host: "0.0.0.0"
   port: 8271
@@ -14,14 +14,28 @@ server:
 overlord:
   response:
     streaming: true
+  workflow:
+    auto_decomposition: true
+  llm:
+    # Routing/base inherits from llm.models[text] (Sonnet) — see lattice
+    # in afs-spec SCHEMA_GUIDE.md → 'Overlord LLM stages'. Only the
+    # synthesis tier is overridden here so the final user-visible reply
+    # uses a faster model than the routing/decomposition path.
+    synthesis:
+      model: "anthropic/claude-haiku-4-5"
+      settings:
+        temperature: 0.7
+        max_tokens: 2000
+        timeout_seconds: 30
 
 llm:
   api_keys:
     anthropic: "${{ secrets.ANTHROPIC_API_KEY }}"
   models:
-    - text: "anthropic/claude-haiku-4-5"
+    - text: "anthropic/claude-sonnet-4-6"
 
 scheduler:
+  enabled: true
   timezone: "UTC"
 
 agents:
